@@ -420,6 +420,7 @@ class BrowserColumn(Pager):
             this_color.append('directory')
         else:
             this_color.append('file')
+            this_color.append('ext_is_'+drawn.extension.lower())
 
         if drawn.stat:
             mode = drawn.stat.st_mode

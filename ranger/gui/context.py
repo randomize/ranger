@@ -23,10 +23,9 @@ CONTEXT_KEYS = ['reset', 'error', 'badinfo',
 
 class Context(object):
     def __init__(self, keys):
-        # set all given keys to True
-        d = self.__dict__
+        # set all given keys to True, adding new atttributes if not yet exist
         for key in keys:
-            d[key] = True
+            setattr(self, key, True)
 
 # set all keys to False
 for key in CONTEXT_KEYS:
